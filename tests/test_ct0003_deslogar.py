@@ -1,4 +1,3 @@
-import time
 import pytest
 from conftest import setup_teardown
 from pages.login_page import LoginPage
@@ -14,12 +13,9 @@ class TestCT0003:
         base_page = BasePage()
 
         login_page.fazer_login("standard_user", "secret_sauce")
-        time.sleep(2)
         
         home_page.acessar_menu()
-        time.sleep(2)
         
         home_page.deslogar()
-        time.sleep(2)
         
         base_page.verificar_se_deslogou()
